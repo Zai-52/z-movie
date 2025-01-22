@@ -17,9 +17,12 @@ async function fetchMovies(id) {
 export default async function Home({ params }) {
     const byGenres = await fetchMovies(params.id);
 
+    // Decode the URL-encoded genre name
+    const genreName = decodeURIComponent(params.name);
+
     return (
         <>
-            <h3 className="font-bold border-b mb-4 pb-2">{params.name}</h3>
+            <h3 className="font-bold border-b mb-4 pb-2">{genreName}</h3>
             <Movies movies={byGenres.results} />
         </>
     );
