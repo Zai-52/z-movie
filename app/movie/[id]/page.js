@@ -41,7 +41,12 @@ export default async function Movies({ params }) {
             </div>
 
             <img src={cover + movie.backdrop_path} />
-            <p className="mt-3"></p>
+            <p className="mt-3">{movie.overview}</p>
+
+            <div className="mt-5">
+				<h3 className="font-bold border-b mb-4 pb-2">Starring</h3>
+				<Persons movie={movie} />
+			</div>
         </>
     );
 }
