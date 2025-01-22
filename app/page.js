@@ -13,7 +13,7 @@ async function fetchPopular() {
 }
 
 async function fetchTrending() {
-  const res = await fetch("https://api.themoviedb.org/3/tending/movie/day", {
+  const res = await fetch("https://api.themoviedb.org/3/trending/movie/day", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -31,7 +31,7 @@ export default async function Home() {
       <h3 className="font-bold border-b mb-4 pb-2">Popular</h3>
       <Movies movies={popular.results} />
 
-      <h3 className="font-bold border-b mb-4 pb-2">Trending</h3>
+      <h3 className="font-bold border-b my-4 pb-2">Trending</h3>
       <Movies movies={trending.results} />
     </div>
   );
