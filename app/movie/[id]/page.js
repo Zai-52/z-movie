@@ -1,3 +1,4 @@
+import Persons from "@/components/Persons";
 import { Badge } from "@/components/ui/badge";
 
 const token = process.env.TMDB_TOKEN;
